@@ -54,7 +54,7 @@ faq:
       <a class="need" href="conditions/pink-eye.html"><span class="glyph" aria-hidden="true">●</span><span>Red, itchy or sticky eye<small>Pink eye guide</small></span></a>
       <a class="need chip-urgent" href="conditions/floaters-and-flashes.html"><span class="glyph" aria-hidden="true">!</span><span>New floaters or flashes<small>Could be urgent</small></span></a>
       <a class="need" href="tools/lasik-quiz.html"><span class="glyph" aria-hidden="true">✓</span><span>Thinking about LASIK<small>Candidacy quiz</small></span></a>
-      <a class="need" href="tools/myopia-risk.html"><span class="glyph" aria-hidden="true">◔</span><span>My child's eyesight<small>Myopia risk check</small></span></a>
+      <a class="need" href="tools/myopia-risk.html"><span class="glyph" aria-hidden="true">Jr</span><span>My child's eyesight<small>Myopia risk check</small></span></a>
     </div>
   </div>
 </section>
@@ -150,6 +150,13 @@ faq:
       <a class="card" href="careers.html"><h3>Join the team</h3><p>Optometrists, writers, video creators and translators: contribute and get paid.</p><span class="more">Open roles →</span></a>
       <a class="card" href="for-providers.html"><h3>For eye-care providers</h3><p>Receive patient requests in your area, or feature your practice next to our checks.</p><span class="more">Get patients →</span></a>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Eye health news</p><h2>From trusted sources</h2></div><p>Refreshed automatically each week.</p></div>
+    <ul class="results-list">{% for n in site.data.news limit: 6 %}<li><a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.title }}</a><p>{{ n.source }}</p></li>{% endfor %}</ul>
   </div>
 </section>
 
