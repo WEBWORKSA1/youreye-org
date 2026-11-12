@@ -86,7 +86,7 @@
   name: Child myopia risk check
   blurb: For parents. Rates the habits and family factors linked to nearsightedness.
   time: 2 min
-  glyph: "◔"
+  glyph: "Jr"
   cat: Family
 - slug: exam-schedule
   name: Eye exam schedule
