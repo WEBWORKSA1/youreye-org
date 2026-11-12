@@ -1,0 +1,5 @@
+{% if page.faq %}<section class="faq">
+  <h2>Questions people ask</h2>
+  {% for f in page.faq %}<details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>
+  {% endfor %}
+</section>{% endif %}

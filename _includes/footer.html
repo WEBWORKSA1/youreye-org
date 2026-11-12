@@ -1,0 +1,31 @@
+<section class="newsletter">
+  <div class="wrap nl-row">
+    <div>
+      <h2>The monthly eye-health digest</h2>
+      <p>One email a month: a new free check, one condition explained in plain English, and this month's contest. Unsubscribe anytime.</p>
+    </div>
+    <form class="nl-form" data-form="newsletter" data-subject="Newsletter signup" data-inline="You're on the list. Look out for the next digest.">
+      <label class="sr" for="nl-email">Email address</label>
+      <input id="nl-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-amber" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand brand-light" href="./">{% include logo.svg %}<span>YourEye<b>.org</b></span></a>
+      <p>Free eye checks, plain-English eye health and a free service that connects you with eye-care providers.</p>
+      <p class="tip"><strong>Today's eye tip:</strong> <span data-daily-tip>Every 20 minutes of screen time, look about 20 feet away for 20 seconds.</span></p>
+    </div>
+    <div><h3>Eye checks</h3><ul>{% for t in site.data.tools limit: 7 %}<li><a href="tools/{{ t.slug }}.html">{{ t.name }}</a></li>{% endfor %}<li><a href="tools/">All checks</a></li></ul></div>
+    <div><h3>Conditions</h3><ul>{% for c in site.data.conditions limit: 7 %}<li><a href="conditions/{{ c.slug }}.html">{{ c.name }}</a></li>{% endfor %}<li><a href="conditions/">All conditions</a></li></ul></div>
+    <div><h3>Get involved</h3><ul><li><a href="find-care.html">Find eye care</a></li><li><a href="for-providers.html">For eye-care providers</a></li><li><a href="support.html">Support YourEye.org</a></li><li><a href="contests.html">Contests and prizes</a></li><li><a href="careers.html">Careers and contributors</a></li><li><a href="advertise.html">Advertise and sponsor</a></li><li><a href="https://web.works/contact" target="_blank" rel="noopener">Buy or partner on this domain</a></li></ul></div>
+    <div><h3>About</h3><ul><li><a href="about.html">About us</a></li><li><a href="editorial-policy.html">Editorial policy</a></li><li><a href="disclaimer.html">Medical disclaimer</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li><li><a href="accessibility.html">Accessibility</a></li><li><a href="legal.html">Trademark and copyright</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="wrap foot-base">
+    <p>© <span data-year>2026</span> YourEye.org. An independent, ad-supported website. Not a charity, clinic or medical provider. Content is educational and does not replace professional eye care. Sudden vision loss, new flashes or floaters, a curtain over your vision, or eye pain need emergency care.</p>
+    <p>“YourEye.org” is a descriptive domain name and is not affiliated with any trademark owner. <a href="legal.html">Trademark and copyright disclosure</a></p>
+  </div>
+</footer>

@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<article class="wrap article">
+  <header class="art-head">
+    <p class="eyebrow">Guide</p>
+    <h1>{{ page.title }}</h1>
+    <p class="lede">{{ page.description }}</p>
+    <p class="meta">Updated {{ page.updated | default: site.time | date: "%B %Y" }} · Written from NEI, AAO, AOA, FDA and CDC guidance · <a href="editorial-policy.html">How we write</a> · Not medical advice</p>
+  </header>
+  <div class="art-grid">
+    <div class="prose">
+      {% if page.urgent %}{% include urgent.html %}{% endif %}
+      {{ content }}
+      {% include ad.html slot="in-content" %}
+      {% if page.video %}{% assign v = site.data.videos | where: "id", page.video | first %}<h2>Watch</h2>
+      {% include video.html id=v.id title=v.title by=v.by %}{% endif %}
+      {% include faq.html %}
+      {% include sources.html %}
+    </div>
+    <aside class="side">
+      {% if page.tools %}<div class="side-box"><h2 class="h4">Related free checks</h2><ul class="link-list">{% for t in page.tools %}{% assign tt = site.data.tools | where: "slug", t | first %}<li><a href="tools/{{ tt.slug }}.html">{{ tt.name }}</a></li>{% endfor %}</ul></div>{% endif %}
+      {% include lead-cta.html need=page.need title=page.cta_title text=page.cta_text %}
+      {% include ad.html slot="sidebar" %}
+    </aside>
+  </div>
+  <section class="related">
+    <h2 class="h4">More guides</h2>
+    <ul class="chips">{% for g in site.data.guides %}{% assign gu = "/guides/" | append: g.slug | append: ".html" %}{% unless page.url == gu %}<li><a class="chip" href="guides/{{ g.slug }}.html">{{ g.name }}</a></li>{% endunless %}{% endfor %}</ul>
+  </section>
+</article>

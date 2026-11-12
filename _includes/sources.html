@@ -1,0 +1,4 @@
+{% if page.sources %}<section class="sources">
+  <h2 class="h4">Sources</h2>
+  <ol>{% for s in page.sources %}<li><a href="{{ s.u }}" target="_blank" rel="noopener">{{ s.t }}</a></li>{% endfor %}</ol>
+</section>{% endif %}

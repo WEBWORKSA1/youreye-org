@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="wrap article tool-page">
+  <header class="art-head">
+    <p class="eyebrow">Free eye check · {{ page.time | default: "2 min" }} · No sign-up</p>
+    <h1>{{ page.title }}</h1>
+    <p class="lede">{{ page.description }}</p>
+  </header>
+  <section class="tool-shell" id="tool" aria-live="polite"><noscript><p>This check needs JavaScript. Please turn it on and reload the page.</p></noscript><p class="loading">Loading the check…</p></section>
+  <p class="note">A screening aid, not a diagnosis. Screens, lighting and distance affect results. If something looks wrong, or your vision changes suddenly, see an eye-care professional. <a href="disclaimer.html">Medical disclaimer</a></p>
+  <div class="art-grid">
+    <div class="prose">
+      {{ content }}
+      {% include ad.html slot="in-content" %}
+      {% include faq.html %}
+      {% include sources.html %}
+    </div>
+    <aside class="side">
+      {% include lead-cta.html need=page.need title=page.cta_title text=page.cta_text %}
+      <div class="side-box"><h2 class="h4">More free checks</h2><ul class="link-list">{% for t in site.data.tools %}{% unless page.tool == t.slug %}<li><a href="tools/{{ t.slug }}.html">{{ t.name }}</a></li>{% endunless %}{% endfor %}</ul></div>
+      {% include ad.html slot="sidebar" %}
+    </aside>
+  </div>
+</article>

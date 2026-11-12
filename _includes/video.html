@@ -1,0 +1,4 @@
+<figure class="video">
+  <button class="yt" type="button" data-id="{{ include.id }}" aria-label="Play video: {{ include.title | escape }}"><img src="https://i.ytimg.com/vi/{{ include.id }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="play" aria-hidden="true"></span></button>
+  <figcaption>{{ include.title }} <span>{{ include.by }}</span></figcaption>
+</figure>
