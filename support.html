@@ -1,0 +1,68 @@
+---
+title: Support YourEye.org
+description: Help keep free eye checks and plain-English eye health online. Give once or monthly to fund operations, outreach, new contributors and contest prizes.
+keywords: support donate eye health free vision tests
+---
+<section class="page-hero">
+  <div class="wrap hero-grid" style="align-items:start">
+    <div>
+      <p class="eyebrow">Support us</p>
+      <h1>Keep eye checks free for everyone</h1>
+      <p class="lede">At least a billion people worldwide live with a vision problem that could have been prevented or has not been treated, according to the World Health Organization. Many simply never get checked. YourEye.org gives anyone a free first step. Your support keeps it free and growing.</p>
+      <h2 class="h3 mt2">Where your support goes</h2>
+      <div class="grid g2">
+        <div class="side-box"><h3 class="h4">Operations</h3><p class="mt0">Hosting, tools, accessibility testing and keeping every check free and ad-light.</p></div>
+        <div class="side-box"><h3 class="h4">Promotions and outreach</h3><p class="mt0">Reaching people who have never had an eye exam, including awareness-month campaigns.</p></div>
+        <div class="side-box"><h3 class="h4">Hiring talent</h3><p class="mt0">Paying eye-care professionals to review content, and writers, translators and video creators.</p></div>
+        <div class="side-box"><h3 class="h4">Contests and prizes</h3><p class="mt0">Monthly Eye-Q prizes that make learning about eye health fun.</p></div>
+      </div>
+    </div>
+    <div class="form-card" id="donate">
+      <h2 class="h3">Choose your support</h2>
+      <div class="amounts" role="group" aria-label="Frequency">
+        <button type="button" data-freq="one-time" aria-pressed="true">One time</button>
+        <button type="button" data-freq="monthly" aria-pressed="false">Monthly</button>
+      </div>
+      <div class="amounts" role="group" aria-label="Amount in US dollars">
+        <button type="button" data-amt="5">$5</button>
+        <button type="button" data-amt="15" aria-pressed="true">$15</button>
+        <button type="button" data-amt="50">$50</button>
+        <button type="button" data-amt="100">$100</button>
+      </div>
+      <div class="field"><label for="customAmt">Or enter an amount (USD)</label><input id="customAmt" type="number" min="1" step="1" placeholder="e.g. 25"></div>
+      <p>You are giving <strong id="donateSummary">$15 one time</strong>.</p>
+      <a class="btn btn-amber btn-lg" id="donateGo" href="#pledge" style="width:100%">Pledge this amount</a>
+      <p class="fine">YourEye.org is an independent website, not a registered charity. Contributions support the site's operations and are not tax-deductible. Payments are processed by the payment provider; we never see your card details.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sky" id="pledge">
+  <div class="wrap hero-grid" style="align-items:start">
+    <div>
+      <h2>Pledge now, pay securely by link</h2>
+      <p>Tell us how you would like to help. We email you a secure payment link (card, PayPal or bank, depending on your country) within one business day. Prefer to sponsor something specific, like a month's contest prize or a translated guide? Say so in the message.</p>
+      <h3 class="h4 mt2">Other ways to help</h3>
+      <ul>
+        <li><strong>Share a check</strong> with someone who has not had an eye exam in years</li>
+        <li><strong>Contribute your skills</strong> as a reviewer, writer, translator or creator on our <a href="careers.html">careers page</a></li>
+        <li><strong>Sponsor</strong> a tool, newsletter or contest on our <a href="advertise.html">advertising page</a></li>
+        <li><strong>Partner with us</strong> or ask about the domain at <a href="https://web.works/contact" target="_blank" rel="noopener">web.works/contact</a></li>
+      </ul>
+    </div>
+    <form class="form-card" data-form="pledge" data-subject="Support pledge">
+      <div class="row2">
+        <div class="field"><label for="s-name">Name</label><input id="s-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="s-email">Email</label><input id="s-email" type="email" name="email" required autocomplete="email"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="pledgeAmount">Amount</label><input id="pledgeAmount" name="amount" readonly></div>
+        <div class="field"><label for="s-use">Use my support for</label><select id="s-use" name="purpose"><option>Wherever it is needed most</option><option>Operations</option><option>Promotions and outreach</option><option>Hiring talent</option><option>Contests and prizes</option></select></div>
+      </div>
+      <div class="field"><label for="s-msg">Message (optional)</label><textarea id="s-msg" name="message" rows="3"></textarea></div>
+      <label class="check"><input type="checkbox" name="public_thanks" value="Yes"> <span>You may thank me by first name on the site.</span></label>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-amber btn-lg mt1" type="submit">Send my pledge</button>
+    </form>
+  </div>
+</section>
