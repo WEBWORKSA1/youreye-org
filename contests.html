@@ -1,0 +1,88 @@
+---
+title: Monthly eye health contests and prizes
+description: Play the monthly Eye-Q challenge, ten questions on eye health, for a chance to win this month's prize, or enter the creative photo and art contest.
+keywords: eye health quiz contest prize giveaway monthly
+scripts: [assets/js/contest.js]
+---
+<section class="page-hero">
+  <div class="wrap hero-grid" style="align-items:start">
+    <div>
+      <p class="eyebrow">Contests and prizes</p>
+      <h1>The <span data-month>monthly</span> Eye-Q challenge</h1>
+      <p class="lede">Ten questions about eye health. Score 7 or more and you can enter this month's prize draw. Questions change every month.</p>
+      <dl class="kv"><dt>This month's prize</dt><dd><strong data-config="contest.prize">Eyewear gift card</strong></dd><dt>Runner-up</dt><dd data-config="contest.runnerUp">Shout-out in the monthly digest</dd><dt>Draw closes in</dt><dd><span class="countdown" data-countdown>--</span></dd></dl>
+      <p class="fine">Free to enter. No purchase necessary. 18+ (or age of majority where you live). Read the <a href="#rules">official rules</a>.</p>
+    </div>
+    <div class="side-box">
+      <h2 class="h3">Want to sponsor a month?</h2>
+      <p class="mt0">Brands, clinics and optical retailers can provide a prize and get a \"presented by\" mention on this page and in our digest.</p>
+      <a class="btn btn-ghost" href="advertise.html">Sponsorship options</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:20px">
+  <div class="wrap" style="max-width:860px">
+    <div id="quiz" class="tool-shell"><p class="loading">Loading this month's questions…</p></div>
+    <form class="form-card mt2" id="entry" hidden data-form="contest" data-subject="Eye-Q contest entry">
+      <h2 class="h3">Enter the prize draw</h2>
+      <div class="row2">
+        <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" name="email" required autocomplete="email"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="c-country">Country</label><input id="c-country" name="country" required autocomplete="country-name"></div>
+        <div class="field"><label for="quizScore">Your score</label><input id="quizScore" name="score" readonly></div>
+      </div>
+      <label class="check"><input type="checkbox" name="adult" value="Yes" required> <span>I am 18 or older (or the age of majority where I live).</span></label>
+      <label class="check"><input type="checkbox" name="rules" value="Yes" required> <span>I have read and accept the <a href="#rules">official rules</a>.</span></label>
+      <label class="check"><input type="checkbox" name="newsletter" value="Yes"> <span>Send me the monthly eye-health digest.</span></label>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-amber btn-lg mt1" type="submit">Enter the draw</button>
+    </form>
+  </div>
+</section>
+
+<section class="section section-sky">
+  <div class="wrap hero-grid" style="align-items:start">
+    <div>
+      <p class="eyebrow">Creative contest</p>
+      <h2>Photo and art of the month</h2>
+      <p>This month's theme: <strong id="theme">Eyes in nature</strong>. Share an original photo, drawing, short video or poem on the theme. The best entry is featured on YourEye.org and in our digest, and wins the runner-up prize.</p>
+      <p>Judged on creativity (40%), fit with the theme (40%) and eye-health message (20%). Entries must be your own work, contain no identifiable person without their consent, and no brand logos.</p>
+    </div>
+    <form class="form-card" data-form="contest-creative" data-subject="Creative contest entry" data-inline="Entry received. Winners are announced after the month closes.">
+      <div class="row2">
+        <div class="field"><label for="k-name">Name</label><input id="k-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="k-email">Email</label><input id="k-email" type="email" name="email" required autocomplete="email"></div>
+      </div>
+      <div class="field"><label for="k-link">Link to your entry</label><input id="k-link" type="url" name="entry_link" required placeholder="https:// (Google Drive, Dropbox, YouTube, Instagram)"></div>
+      <div class="field"><label for="k-desc">Title and short description</label><textarea id="k-desc" name="description" rows="3" required></textarea></div>
+      <label class="check"><input type="checkbox" name="original" value="Yes" required> <span>This is my original work and I have permission from anyone shown. I am 18+ and accept the official rules.</span></label>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-amber mt1" type="submit">Submit my entry</button>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="rules">
+  <div class="wrap prose">
+    <h2>Official rules</h2>
+    <p><strong>No purchase or payment is necessary to enter or win. A purchase does not improve your chances.</strong></p>
+    <ol>
+      <li><strong>Organizer.</strong> The contests are run by the operator of YourEye.org (\"Organizer\"). Contact: our <a href="contact.html">contact form</a>.</li>
+      <li><strong>Eligibility.</strong> Open to individuals who are 18 or older, or the age of majority where they live, if higher. Void where prohibited or restricted by law. Employees and contractors of the Organizer and any prize sponsor, and their immediate families, may not enter.</li>
+      <li><strong>Entry period.</strong> Each contest runs for one calendar month, from 00:00 on the first day to 23:59 on the last day (US Eastern Time). Entries outside the period are not counted.</li>
+      <li><strong>How to enter.</strong> Quiz draw: complete the monthly Eye-Q quiz with a score of 7 or more and submit the entry form. Creative contest: submit the creative entry form. Limit one quiz entry and one creative entry per person per month. Alternative free entry: send your name, email, country and the words \"Eye-Q free entry\" through our contact form during the entry period.</li>
+      <li><strong>Winner selection.</strong> The quiz winner is drawn at random from all eligible entries within 14 days after the month closes. The creative winner is chosen by a panel using the published criteria. Odds depend on the number of eligible entries.</li>
+      <li><strong>Prizes.</strong> The prize is shown on this page for that month. No cash alternative. The Organizer may substitute a prize of equal or greater value if a prize becomes unavailable. Prizes are not transferable. Winners are responsible for any taxes.</li>
+      <li><strong>Notification.</strong> Winners are notified by email and must reply within 7 days, and may need to confirm eligibility. Otherwise an alternate winner may be selected. Skill-testing questions may be required where the law requires them.</li>
+      <li><strong>Publicity.</strong> With the winner's permission, the Organizer may publish the winner's first name, country and creative entry.</li>
+      <li><strong>Content licence.</strong> Creative entrants keep their copyright and grant the Organizer a non-exclusive, royalty-free licence to display the entry on YourEye.org and its newsletter and social channels, with credit.</li>
+      <li><strong>Privacy.</strong> Entry details are used to run the contest and, if you opt in, to send the digest. See the <a href="privacy.html">privacy policy</a>.</li>
+      <li><strong>General.</strong> The Organizer may disqualify entries that are fraudulent, automated or break these rules, and may cancel or modify a contest if it cannot run as planned. These contests are not sponsored, endorsed or administered by any social media platform.</li>
+    </ol>
+    <h3>Past winners</h3>
+    <p>Winners are listed here after each monthly draw.</p>
+  </div>
+</section>
