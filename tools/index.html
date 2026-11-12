@@ -1,0 +1,23 @@
+---
+layout: default
+title: Free eye checks and vision tools
+description: Sixteen free, private eye checks and calculators. Test your visual acuity, central vision, color vision, astigmatism and contrast, score dry eye and screen strain, and decode your prescription.
+keywords: online eye test vision test tools calculators
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Free eye checks</p>
+    <h1>Check your eyes at home, for free</h1>
+    <p class="lede">Sixteen screening checks and calculators built on the same principles eye doctors use. No sign-up, and your results stay on your device. They flag changes worth looking into; they do not replace an eye exam.</p>
+  </div>
+</section>
+<section class="section" style="padding-top:24px">
+  <div class="wrap">
+    {% assign groups = site.data.tools | group_by: "cat" %}
+    {% for g in groups %}<h2 class="h3 mt2">{{ g.name }}</h2>
+    <div class="grid g4">{% for t in g.items %}{% include tool-card.html t=t %}{% endfor %}</div>
+    {% endfor %}
+    {% include ad.html slot="in-content" %}
+    <div class="mt2">{% include lead-cta.html need="exam" title="A check flagged something? Get it looked at." text="We connect you with up to three local optometrists or ophthalmologists. Free, with no obligation." %}</div>
+  </div>
+</section>
