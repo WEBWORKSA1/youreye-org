@@ -1,0 +1,24 @@
+---
+layout: default
+title: Eye conditions explained in plain English
+description: Plain-English guides to 16 common eye conditions, from myopia and astigmatism to cataract, glaucoma, macular degeneration and dry eye, with symptoms, risks and treatments.
+keywords: eye conditions eye diseases list symptoms treatment
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Eye condition library</p>
+    <h1>Eye conditions, explained clearly</h1>
+    <p class="lede">What each condition is, the symptoms to watch for, who is at risk and how it is treated. Written from National Eye Institute, American Academy of Ophthalmology and American Optometric Association guidance, with sources on every page.</p>
+  </div>
+</section>
+<section class="section" style="padding-top:24px">
+  <div class="wrap">
+    <div class="urgent"><h2 class="h4">Some symptoms can't wait</h2><p>Sudden vision loss, a curtain over your vision, a sudden shower of floaters or flashes, a painful red eye, or a chemical in the eye need care today. <a href="guides/eye-emergencies.html">Read the eye emergencies guide</a>.</p></div>
+    {% assign groups = site.data.conditions | group_by: "cat" %}
+    {% for g in groups %}<h2 class="h3 mt2">{{ g.name }}</h2>
+    <div class="grid g3">{% for c in g.items %}<a class="card" href="conditions/{{ c.slug }}.html"><h3>{{ c.name }}</h3><p>{{ c.blurb }}</p><span class="more">Read more →</span></a>{% endfor %}</div>
+    {% endfor %}
+    {% include ad.html slot="in-content" %}
+    <div class="mt2">{% include lead-cta.html need="exam" %}</div>
+  </div>
+</section>
