@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- comment -%} Relative base: depth = number of "/" in the URL minus one. Works on github.io/youreye-org/ and on the bare domain. {%- endcomment -%}
+{%- assign _a = page.url | size -%}{%- assign _b = page.url | remove: "/" | size -%}{%- assign _dirs = _a | minus: _b | minus: 1 -%}
+{%- capture base -%}{%- for i in (1.._dirs) -%}../{%- endfor -%}{%- endcapture -%}
+{%- if base == "" -%}{%- assign base = "./" -%}{%- endif %}
+<base href="{{ base }}">
+<script>try{var p=JSON.parse(localStorage.getItem('ye_a11y')||'{}'),d=document.documentElement;if(p.size)d.style.fontSize=(100+p.size*10)+'%';if(p.contrast)d.classList.add('hc');if(p.motion)d.classList.add('rm')}catch(e){}</script>
+{%- assign ptitle = page.title | default: site.title -%}
+{%- if page.url == "/" -%}{%- assign full_title = site.title | append: " | " | append: site.tagline -%}{%- else -%}{%- assign full_title = ptitle | append: " | " | append: site.title -%}{%- endif -%}
+{%- assign pdesc = page.description | default: site.description | strip_html | strip_newlines -%}
+{%- assign abs_home = "/" | absolute_url %}
+<title>{{ full_title | escape }}</title>
+<meta name="description" content="{{ pdesc | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+{% if page.noindex %}<meta name="robots" content="noindex,follow">
+{% endif %}<meta name="google-adsense-account" content="{{ site.adsense_client }}">
+<meta name="theme-color" content="#0B1F33">
+<meta property="og:type" content="{% if page.layout == 'condition' or page.layout == 'guide' %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="YourEye.org">
+<meta property="og:title" content="{{ ptitle | escape }}">
+<meta property="og:description" content="{{ pdesc | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/site.css?v={{ site.time | date: '%Y%m%d%H%M' }}">
+{% unless page.ads == false %}<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+{% endunless %}<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"{{ abs_home }}#org","name":"YourEye.org","url":"{{ abs_home }}","logo":"{{ '/assets/img/favicon.svg' | absolute_url }}"},{"@type":"WebSite","@id":"{{ abs_home }}#site","name":"YourEye.org","url":"{{ abs_home }}","publisher":{"@id":"{{ abs_home }}#org"},"potentialAction":{"@type":"SearchAction","target":"{{ '/search.html' | absolute_url }}?q={query}","query-input":"required name=query"}}{% if page.section %},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"{{ abs_home }}"},{"@type":"ListItem","position":2,"name":{{ page.section | jsonify }},"item":"{{ page.section_url | prepend: '/' | absolute_url }}"},{"@type":"ListItem","position":3,"name":{{ ptitle | jsonify }},"item":"{{ page.url | absolute_url }}"}]}{% endif %}{% if page.layout == 'condition' or page.layout == 'guide' %},{"@type":"MedicalWebPage","name":{{ ptitle | jsonify }},"description":{{ pdesc | jsonify }},"url":"{{ page.url | absolute_url }}","lastReviewed":"{{ page.updated | default: site.time | date: '%Y-%m-%d' }}","publisher":{"@id":"{{ abs_home }}#org"}{% if page.condition %},"about":{"@type":"MedicalCondition","name":{{ page.condition | jsonify }}}{% endif %}}{% endif %}{% if page.faq %},{"@type":"FAQPage","mainEntity":[{% for f in page.faq %}{"@type":"Question","name":{{ f.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% endif %}]}</script>
+{{ page.head_extra }}
+</head>
+<body class="{{ page.body_class }}">
+<a class="skip" href="#main">Skip to content</a>
+<a class="owner-bar" href="{{ site.owner_contact }}" target="_blank" rel="noopener">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership</a>
+{% include header.html %}
+<div class="aware" id="aware" hidden></div>
+<main id="main" tabindex="-1">
+{% if page.section %}<nav class="crumbs wrap" aria-label="Breadcrumb"><a href="./">Home</a><span aria-hidden="true">›</span><a href="{{ page.section_url }}">{{ page.section }}</a><span aria-hidden="true">›</span><span aria-current="page">{{ page.crumb | default: ptitle }}</span></nav>
+{% endif %}{{ content }}
+</main>
+{% include footer.html %}
+<script src="assets/js/config.js?v={{ site.time | date: '%Y%m%d%H%M' }}" defer></script>
+<script src="assets/js/site.js?v={{ site.time | date: '%Y%m%d%H%M' }}" defer></script>
+{% if page.tool %}<script src="assets/js/tools/{{ page.tool }}.js?v={{ site.time | date: '%Y%m%d%H%M' }}" defer></script>
+{% endif %}{% for s in page.scripts %}<script src="{{ s }}?v={{ site.time | date: '%Y%m%d%H%M' }}" defer></script>
+{% endfor %}</body>
+</html>
