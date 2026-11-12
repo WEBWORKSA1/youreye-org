@@ -1,0 +1,5 @@
+---
+layout: null
+sitemap: false
+---
+[{%- assign n = 0 -%}{%- for p in site.pages -%}{%- if p.title and p.noindex != true -%}{%- if n > 0 -%},{%- endif -%}{"t":{{ p.title | jsonify }},"d":{{ p.description | default: "" | strip_html | jsonify }},"k":{{ p.keywords | default: p.section | default: "" | jsonify }},"u":{{ p.url | remove_first: "/" | default: "./" | jsonify }}}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}]

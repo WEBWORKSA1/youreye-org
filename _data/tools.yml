@@ -1,0 +1,96 @@
+- slug: acuity
+  name: Visual acuity check
+  blurb: Tumbling-E letter check for each eye, with screen calibration. Gives an approximate 20/20-style score.
+  time: 4 min
+  glyph: E
+  cat: Vision
+- slug: amsler
+  name: Amsler grid
+  blurb: The grid eye doctors use to spot central-vision changes linked to macular problems.
+  time: 2 min
+  glyph: "#"
+  cat: Vision
+- slug: color-vision
+  name: Color vision screener
+  blurb: Dot plates drawn fresh each time to screen for red-green and blue-yellow color deficiency.
+  time: 3 min
+  glyph: "8"
+  cat: Vision
+- slug: astigmatism
+  name: Astigmatism dial
+  blurb: A clock-dial chart that shows whether some line directions look darker than others.
+  time: 1 min
+  glyph: "✳"
+  cat: Vision
+- slug: contrast
+  name: Contrast check
+  blurb: Letters fade step by step to show how well you see low-contrast detail.
+  time: 2 min
+  glyph: "◐"
+  cat: Vision
+- slug: near-vision
+  name: Near vision card
+  blurb: Read text at a normal reading distance to see if you may need reading glasses.
+  time: 2 min
+  glyph: Aa
+  cat: Vision
+- slug: screen-break-timer
+  name: 20-20-20 break timer
+  blurb: Reminds you every 20 minutes to look 20 feet away for 20 seconds.
+  time: All day
+  glyph: "20"
+  cat: Comfort
+- slug: focus-trainer
+  name: Focus and blink break
+  blurb: A guided two-minute routine to relax focusing muscles and re-wet your eyes.
+  time: 2 min
+  glyph: "◎"
+  cat: Comfort
+- slug: dry-eye-score
+  name: Dry eye symptom score
+  blurb: Ten questions that rate how much dryness symptoms affect your day.
+  time: 2 min
+  glyph: "≈"
+  cat: Comfort
+- slug: screen-strain
+  name: Screen eye-strain risk
+  blurb: Scores your screen setup and habits and lists the three fixes that matter most.
+  time: 2 min
+  glyph: "▭"
+  cat: Comfort
+- slug: prescription-decoder
+  name: Prescription decoder
+  blurb: Turns SPH, CYL, AXIS, ADD and PD on your glasses prescription into plain English.
+  time: 1 min
+  glyph: Rx
+  cat: Prescriptions
+- slug: contacts-converter
+  name: Glasses-to-contacts converter
+  blurb: Shows how a strong glasses prescription changes at the eye (vertex distance).
+  time: 1 min
+  glyph: "⇄"
+  cat: Prescriptions
+- slug: lasik-quiz
+  name: LASIK candidacy quiz
+  blurb: Ten questions on the factors surgeons check first, and which procedures may fit.
+  time: 2 min
+  glyph: "✓"
+  cat: Surgery and costs
+- slug: lasik-cost
+  name: LASIK vs glasses cost calculator
+  blurb: Compares long-term spending on glasses and contacts with laser vision correction.
+  time: 2 min
+  glyph: $
+  cat: Surgery and costs
+- slug: myopia-risk
+  name: Child myopia risk check
+  blurb: For parents. Rates the habits and family factors linked to nearsightedness.
+  time: 2 min
+  glyph: "◔"
+  cat: Family
+- slug: exam-schedule
+  name: Eye exam schedule
+  blurb: How often you or your child should have an eye exam, with a calendar reminder.
+  time: 1 min
+  glyph: "▦"
+  cat: Family

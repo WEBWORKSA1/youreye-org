@@ -1,0 +1,64 @@
+- slug: myopia
+  name: Myopia (nearsightedness)
+  blurb: Far objects look blurry. Rising fast in children worldwide.
+  cat: Focusing problems
+- slug: hyperopia
+  name: Hyperopia (farsightedness)
+  blurb: The eye works harder to focus, especially up close.
+  cat: Focusing problems
+- slug: astigmatism
+  name: Astigmatism
+  blurb: An unevenly curved cornea or lens blurs vision at all distances.
+  cat: Focusing problems
+- slug: presbyopia
+  name: Presbyopia
+  blurb: The age-related loss of close-up focus that starts in the 40s.
+  cat: Focusing problems
+- slug: cataract
+  name: Cataract
+  blurb: Clouding of the eye's lens. Common with age and fixable with surgery.
+  cat: Eye diseases
+- slug: glaucoma
+  name: Glaucoma
+  blurb: Optic-nerve damage that steals side vision with no early warning.
+  cat: Eye diseases
+- slug: macular-degeneration
+  name: Age-related macular degeneration (AMD)
+  blurb: Damage to the macula that blurs central vision in older adults.
+  cat: Eye diseases
+- slug: diabetic-retinopathy
+  name: Diabetic retinopathy
+  blurb: Diabetes damages retinal blood vessels. Yearly dilated exams catch it early.
+  cat: Eye diseases
+- slug: dry-eye
+  name: Dry eye
+  blurb: Too few or poor-quality tears cause burning, grittiness and blur.
+  cat: Everyday problems
+- slug: digital-eye-strain
+  name: Digital eye strain
+  blurb: Tired, dry, blurry eyes after long screen sessions.
+  cat: Everyday problems
+- slug: pink-eye
+  name: Pink eye (conjunctivitis)
+  blurb: Red, itchy or sticky eyes from viruses, bacteria or allergies.
+  cat: Everyday problems
+- slug: floaters-and-flashes
+  name: Floaters and flashes
+  blurb: Usually harmless specks, but a sudden shower can mean a torn retina.
+  cat: Everyday problems
+- slug: amblyopia
+  name: Amblyopia (lazy eye)
+  blurb: One eye does not develop full vision in childhood. Best treated early.
+  cat: Children's vision
+- slug: strabismus
+  name: Strabismus (crossed or turned eyes)
+  blurb: The eyes do not line up and point in different directions.
+  cat: Children's vision
+- slug: keratoconus
+  name: Keratoconus
+  blurb: The cornea thins and bulges into a cone, distorting vision.
+  cat: Cornea
+- slug: color-vision-deficiency
+  name: Color vision deficiency
+  blurb: Trouble telling certain colors apart, most often reds and greens.
+  cat: Cornea

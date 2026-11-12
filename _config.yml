@@ -1,0 +1,50 @@
+title: YourEye.org
+tagline: Free eye checks, plain-English eye health and help finding care
+description: >-
+  YourEye.org offers free at-home eye checks, plain-English guides to eye conditions
+  and a free service that matches you with eye-care providers near you.
+# Canonical home. Pages use a computed <base href>, so the same build also works
+# at https://webworksa1.github.io/youreye-org/ before the domain is attached.
+url: "https://youreye.org"
+baseurl: ""
+lang: en
+adsense_client: "ca-pub-6620975821265271"
+owner_contact: "https://web.works/contact"
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - PROMPTS.md
+  - RESEARCH.md
+  - automation
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      ads: true
+  - scope:
+      path: "conditions"
+    values:
+      layout: condition
+      section: Conditions
+      section_url: conditions/
+  - scope:
+      path: "guides"
+    values:
+      layout: guide
+      section: Guides
+      section_url: guides/
+  - scope:
+      path: "tools"
+    values:
+      layout: tool
+      section: Eye checks
+      section_url: tools/

@@ -1,0 +1,10 @@
+{
+  "name": "YourEye.org",
+  "short_name": "YourEye",
+  "description": "Free eye checks, plain-English eye health and help finding care.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FBFCFD",
+  "theme_color": "#0B1F33",
+  "icons": [{ "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
