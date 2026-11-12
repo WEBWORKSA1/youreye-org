@@ -19,7 +19,7 @@
     root.innerHTML = '<p class="t-step">Reading card</p><h2 class="h3">Hold the screen 40 cm (16 in) away</h2><p>That is a normal reading distance, about the length from your elbow to your fingertips. Wear your usual reading glasses if you have them. Tap the <strong>smallest line you can read comfortably</strong>.</p>' +
       (cal ? '' : '<p class="note">For true print sizes, calibrate your screen first in the <a href="tools/acuity.html">acuity check</a> (step 1). Without it, sizes are estimated.</p>') +
       '<div id="lines">' + SIZES.map(function (n, i) {
-        var px = n * 0.3528 * pxmm * 0.72;
+        var px = n * 0.3528 * pxmm;
         return '<button type="button" class="q" data-i="' + i + '" style="display:block;width:100%;text-align:left;cursor:pointer;font-family:Georgia,\'Times New Roman\',serif;font-size:' + px.toFixed(2) + 'px;line-height:1.35"><span class="pill" style="font:600 12px var(--f);margin-right:8px">N' + n + '</span>' + TXT[i] + '</button>';
       }).join('') + '</div><button class="btn btn-ghost mt1" id="none" type="button">I can\'t read any line comfortably</button>';
     Y.$('#lines').addEventListener('click', function (e) { var b = e.target.closest('[data-i]'); if (b) result(+b.getAttribute('data-i')); });
