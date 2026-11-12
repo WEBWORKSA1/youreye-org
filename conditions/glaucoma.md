@@ -52,7 +52,7 @@ Treatment lowers eye pressure to protect the optic nerve:
 - **Laser treatment**, such as selective laser trabeculoplasty (SLT), which helps fluid drain
 - **Surgery**, including minimally invasive glaucoma surgery, trabeculectomy and drainage implants
 
-Taking drops exactly as prescribed is the most important part. Our [eye drops tips in the videos library](videos.html) can help.
+Taking drops exactly as prescribed is the most important part. Short explainers from eye doctors are in our [video library](videos.html).
 
 ## Prevention
 
