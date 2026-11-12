@@ -2,7 +2,7 @@
 title: Color vision deficiency (color blindness)
 description: Color vision deficiency makes some colors hard to tell apart, most often reds and greens. Learn the types, causes, testing and practical tips.
 condition: Color vision deficiency
-cat: Cornea
+cat: Color vision
 need: exam
 keywords: color blindness color vision deficiency red green protan deutan tritan
 tools: [color-vision]
