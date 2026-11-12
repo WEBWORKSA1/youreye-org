@@ -1,0 +1,20 @@
+---
+layout: default
+title: Eye health guides
+description: In-depth, plain-English guides to vision correction surgery, buying glasses online, contact lens safety, children's vision, eye emergencies and sunglasses.
+keywords: eye health guides lasik glasses contacts children sunglasses emergencies
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Guides</p>
+    <h1>Guides for the decisions that matter</h1>
+    <p class="lede">Clear, sourced answers for the choices people search for most: which vision correction surgery fits, how to buy glasses online, how to keep contact lenses safe, and what to do in an eye emergency.</p>
+  </div>
+</section>
+<section class="section" style="padding-top:24px">
+  <div class="wrap">
+    <div class="grid g3">{% for g in site.data.guides %}<a class="card" href="guides/{{ g.slug }}.html"><h3>{{ g.name }}</h3><p>{{ g.blurb }}</p><span class="more">Read the guide →</span></a>{% endfor %}</div>
+    {% include ad.html slot="in-content" %}
+    <div class="mt2">{% include lead-cta.html need="exam" %}</div>
+  </div>
+</section>
