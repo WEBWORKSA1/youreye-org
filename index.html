@@ -1,0 +1,161 @@
+---
+title: YourEye.org
+description: Free at-home eye checks, plain-English guides to eye conditions and a free service that matches you with eye-care providers near you.
+body_class: home
+faq:
+  - q: Is YourEye.org free?
+    a: Yes. Every check, guide and video is free and needs no account. The matching service is also free for you; providers may pay us for introductions, and ads keep the rest of the site running.
+  - q: Can an online eye check replace an eye exam?
+    a: No. Our checks are screening aids that can flag changes worth looking into. Only an in-person exam by an optometrist or ophthalmologist can measure your prescription accurately and check eye health, including diseases like glaucoma that have no early symptoms.
+  - q: Where do my check results go?
+    a: Results are calculated in your browser and are not sent to us. We only receive information you choose to submit through a form, such as a request to be matched with a provider.
+  - q: How does the matching service work?
+    a: You tell us what you need, where you are and how to reach you. We pass your request to up to three local providers that offer that service, and they contact you. You decide whether to book. There is no cost or obligation.
+---
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Free · No sign-up · Built on NEI, AAO, AOA and WHO guidance</p>
+      <h1>Check your eyes in minutes. <span>Understand what you see.</span></h1>
+      <p class="lede">Sixteen free screening checks, plain-English guides to common eye conditions, and a free matching service for when you need a real eye exam, a LASIK consultation or a specialist.</p>
+      <div class="btn-row">
+        <a class="btn btn-amber btn-lg" href="tools/acuity.html">Start a free eye check</a>
+        <a class="btn btn-ghost btn-lg" href="find-care.html">Find eye care near you</a>
+      </div>
+      <ul class="trust"><li>16 interactive checks</li><li>16 condition guides</li><li>Official AAO and NEI videos</li><li>Results stay on your device</li></ul>
+    </div>
+    <svg class="iris-art" viewBox="0 0 400 400" role="img" aria-label="Animated illustration of an eye">
+      <defs>
+        <radialGradient id="irisFill" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#5fd0c9"/><stop offset=".55" stop-color="#0E8F8A"/><stop offset="1" stop-color="#0B1F33"/></radialGradient>
+        <clipPath id="eyeClip"><path d="M20 200C80 95 140 60 200 60s120 35 180 140c-60 105-120 140-180 140S80 305 20 200z"/></clipPath>
+      </defs>
+      <g class="lid">
+        <path d="M20 200C80 95 140 60 200 60s120 35 180 140c-60 105-120 140-180 140S80 305 20 200z" fill="#fff" stroke="#0B1F33" stroke-width="8" stroke-linejoin="round"/>
+        <g clip-path="url(#eyeClip)">
+          <circle cx="200" cy="200" r="100" fill="url(#irisFill)"/>
+          <circle class="fibers" cx="200" cy="200" r="72" fill="none" stroke="#bff1ec" stroke-opacity=".45" stroke-width="40" stroke-dasharray="2 7"/>
+          <circle class="pupil" cx="200" cy="200" r="42" fill="#0B1F33"/>
+          <circle cx="232" cy="168" r="16" fill="#fff" opacity=".9"/>
+          <circle cx="168" cy="236" r="6" fill="#fff" opacity=".6"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Start here</p><h2>What brings you here today?</h2></div><p>Pick the closest match. Each one opens the most useful check or guide.</p></div>
+    <div class="need-grid">
+      <a class="need" href="conditions/myopia.html"><span class="glyph" aria-hidden="true">≋</span><span>Far away looks blurry<small>Nearsightedness</small></span></a>
+      <a class="need" href="tools/near-vision.html"><span class="glyph" aria-hidden="true">Aa</span><span>Small print is harder<small>Near vision check</small></span></a>
+      <a class="need" href="tools/dry-eye-score.html"><span class="glyph" aria-hidden="true">≈</span><span>Dry, tired or gritty eyes<small>Dry eye score</small></span></a>
+      <a class="need" href="tools/screen-strain.html"><span class="glyph" aria-hidden="true">▭</span><span>Screens wear my eyes out<small>Eye-strain risk</small></span></a>
+      <a class="need" href="conditions/pink-eye.html"><span class="glyph" aria-hidden="true">●</span><span>Red, itchy or sticky eye<small>Pink eye guide</small></span></a>
+      <a class="need chip-urgent" href="conditions/floaters-and-flashes.html"><span class="glyph" aria-hidden="true">!</span><span>New floaters or flashes<small>Could be urgent</small></span></a>
+      <a class="need" href="tools/lasik-quiz.html"><span class="glyph" aria-hidden="true">✓</span><span>Thinking about LASIK<small>Candidacy quiz</small></span></a>
+      <a class="need" href="tools/myopia-risk.html"><span class="glyph" aria-hidden="true">◔</span><span>My child's eyesight<small>Myopia risk check</small></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sky">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Free eye checks</p><h2>Screen your vision at home</h2></div><a class="btn btn-ghost" href="tools/">See all 16 checks</a></div>
+    <div class="grid g4">{% for t in site.data.tools limit: 8 %}{% include tool-card.html t=t %}{% endfor %}</div>
+  </div>
+</section>
+
+<section class="section section-ink" id="match">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow" style="color:var(--amber)">Free eye-care matching</p>
+      <h2>Need a real exam, a LASIK consult or a specialist?</h2>
+      <p>Tell us what you need and where you are. We connect you with up to three local eye-care providers who offer that service. You compare and choose. It costs you nothing.</p>
+      <ol class="steps3" style="color:var(--ink)">
+        <li><strong>Tell us what you need</strong><br>Two minutes, no account.</li>
+        <li><strong>We find providers near you</strong><br>Matched to service and location.</li>
+        <li><strong>You choose</strong><br>Book only if it suits you.</li>
+      </ol>
+    </div>
+    <form class="form-card" action="find-care.html" method="get" style="color:var(--ink)">
+      <h3>Start your free match</h3>
+      <div class="field"><label for="q-need">I'm looking for</label>
+        <select id="q-need" name="need" required>
+          <option value="">Choose a service</option>
+          <option value="lasik">LASIK or laser vision correction</option>
+          <option value="cataract">Cataract surgery consultation</option>
+          <option value="exam">Eye exam for adults</option>
+          <option value="child">Eye exam or myopia care for a child</option>
+          <option value="dryeye">Dry eye treatment</option>
+          <option value="glasses">Glasses or contact lenses</option>
+          <option value="specialist">Specialist or second opinion</option>
+        </select></div>
+      <div class="field"><label for="q-loc">City, ZIP or postal code</label><input id="q-loc" type="text" name="location" placeholder="e.g. Toronto or 10001" required autocomplete="postal-code"></div>
+      <button class="btn btn-amber btn-lg" type="submit" style="width:100%">Continue</button>
+      <p class="fine">Free for you. Providers may pay YourEye.org for introductions.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid g2">
+    <div class="tip-card">
+      <p class="eyebrow">Today's eye tip</p>
+      <p class="h3" data-daily-tip>Every 20 minutes of screen time, look about 20 feet away for 20 seconds.</p>
+      <p class="muted mt1">A new tip every day. Start a <a href="tools/screen-break-timer.html">20-20-20 break timer</a>.</p>
+    </div>
+    <div class="tip-card">
+      <p class="eyebrow">Why it matters</p>
+      <div class="stats">
+        <div><div class="stat">2.2 billion</div><p>people worldwide have a near or distance vision impairment.</p></div>
+        <div><div class="stat">1 billion+</div><p>of those cases could have been prevented or are not yet treated.</p></div>
+      </div>
+      <p class="fine">Source: <a href="https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment" target="_blank" rel="noopener">World Health Organization</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sky">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Eye conditions, explained</p><h2>Plain-English guides</h2></div><a class="btn btn-ghost" href="conditions/">All conditions</a></div>
+    <div class="grid g4">{% for c in site.data.conditions limit: 8 %}<a class="card" href="conditions/{{ c.slug }}.html"><span class="pill">{{ c.cat }}</span><h3>{{ c.name }}</h3><p>{{ c.blurb }}</p></a>{% endfor %}</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Watch and learn</p><h2>Short videos from eye doctors</h2></div><a class="btn btn-ghost" href="videos.html">Video library</a></div>
+    <div class="grid g3">
+      {% for v in site.data.videos limit: 3 %}{% include video.html id=v.id title=v.title by=v.by %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include ad.html slot="home-mid" %}
+
+<section class="section section-sky">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Guides</p><h2>Decisions, made clearer</h2></div><a class="btn btn-ghost" href="guides/">All guides</a></div>
+    <div class="grid g3">{% for g in site.data.guides limit: 3 %}<a class="card" href="guides/{{ g.slug }}.html"><h3>{{ g.name }}</h3><p>{{ g.blurb }}</p><span class="more">Read the guide →</span></a>{% endfor %}</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Get involved</p><h2>Help more people see clearly</h2></div></div>
+    <div class="grid g4">
+      <a class="card" href="support.html"><h3>Support us</h3><p>Small monthly gifts keep the checks free and fund outreach, new tools and contest prizes.</p><span class="more">Give →</span></a>
+      <a class="card" href="contests.html"><h3>Monthly Eye-Q contest</h3><p>Ten questions, one prize draw every month. Currently: <span data-config="contest.prize">an eyewear gift card</span>.</p><span class="more">Play →</span></a>
+      <a class="card" href="careers.html"><h3>Join the team</h3><p>Optometrists, writers, video creators and translators: contribute and get paid.</p><span class="more">Open roles →</span></a>
+      <a class="card" href="for-providers.html"><h3>For eye-care providers</h3><p>Receive patient requests in your area, or feature your practice next to our checks.</p><span class="more">Get patients →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sky">
+  <div class="wrap prose" style="max-width:860px">
+    {% include faq.html %}
+    <p class="mt2">Interested in sponsoring, advertising on or acquiring YourEye.org? <a href="advertise.html">See advertising options</a> or <a href="https://web.works/contact" target="_blank" rel="noopener">contact the owner</a>.</p>
+  </div>
+</section>
